@@ -2,3 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body, * {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  box-sizing: border-box;
+
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+@layer components{
+    .products-container{
+        @apply flex flex-wrap justify-center gap-4 mt-5 w-full
+    }
+    .products-heading{
+        @apply text-center
+    }
+    .hero-banner-container{
+        @apply py-[50px] px-[40px] rounded-2xl relative h-[500px] leading-4 w-full
+    }
+    .hero-banner-image{
+      @apply absolute top-0 right-[20%] 
+    }
+    .desc{
+        @apply absolute right-[10%] bottom-[5%]
+        w-[300px] leading-5 flex flex-col text-[#324d67]
+    }
+}
