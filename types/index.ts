@@ -20,13 +20,17 @@ export type Banner = {
   product: string;
 };
 
+type ProductImage = {
+  _key: string;
+  asset: {
+    _type: 'reference';
+    _ref: string;
+  };
+};
+
+
 export type ProductDetails = {
-  imagee: {
-    _key: string;
-    asset: {
-      _type: 'image';
-    }
-  }
+  image: ProductImage[];
   _createdAt: string;
   _rev: string;
   _type: 'product';

@@ -9,6 +9,7 @@ body, * {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   box-sizing: border-box;
+  /* outline: 1px solid green; */
 
 }
 ::-webkit-scrollbar {
@@ -23,7 +24,7 @@ body, * {
         @apply text-center
     }
     .hero-banner-container{
-        @apply py-[50px] px-[40px] rounded-2xl relative h-[500px] leading-4 w-full
+        @apply py-[50px] px-[40px] relative leading-4 w-full lg:px-[100px] bg-[#ebebeb]
     }
     .hero-banner-image{
       @apply absolute top-0 right-[20%] 
@@ -32,4 +33,21 @@ body, * {
         @apply absolute right-[10%] bottom-[5%]
         w-[300px] leading-5 flex flex-col text-[#324d67]
     }
+    .product-card{
+      @apply cursor-pointer text-[#324d67] 
+    }
+
+    .product-image{
+      @apply bg-[#ebebeb] rounded-lg hover:scale-110 transition-all duration-300 ease-in-out
+    }
+    .btn{
+      @apply bg-red-500 px-4 py-2 rounded-2xl text-white text-xl
+    }
+}
+
+.custom-bg{
+  background-image: url('/public/background.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
