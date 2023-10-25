@@ -1,14 +1,15 @@
-import React from 'react'
+
 import imageUrlBuilder from '@sanity/image-url'
 import { createClient } from "next-sanity";
 
-export const client = createClient({
-  projectId: "hggvfj13",
+export const config = {
   dataset: "production",
-  apiVersion: "2021-10-21", 
-  useCdn: true, 
-  token: process.env.SANITY_BACKEND_TOKEN,
-});
+  projectId: "hggvfj13",
+  apiVersion: '2021-10-21',
+  useCdn: true,
+}
+
+export const client = createClient(config);
 
 const builder = imageUrlBuilder(client)
 
